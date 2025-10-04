@@ -926,4 +926,386 @@ body {
     display: flex;
     justify-content: center;
 }
+/* Networking Section Styles */
+.networking-section {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    position: relative;
+    overflow: hidden;
+}
+
+.networking-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="0.5"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+    animation: gridMove 20s linear infinite;
+    pointer-events: none;
+}
+
+.networking-intro {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 4rem;
+}
+
+.passion-statement {
+    font-size: 1.3rem;
+    line-height: 1.6;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 2rem;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Animated Network Visualization */
+.network-visualization {
+    display: flex;
+    justify-content: center;
+    margin: 4rem 0;
+}
+
+.network-container {
+    position: relative;
+    width: 600px;
+    height: 400px;
+}
+
+.network-node {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 15px;
+    padding: 1rem;
+    text-align: center;
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    transition: all 0.3s ease;
+    animation: nodeGlow 3s ease-in-out infinite alternate;
+}
+
+.network-node:hover {
+    transform: scale(1.1);
+    background: rgba(255, 255, 255, 0.25);
+    border-color: rgba(255, 255, 255, 0.6);
+}
+
+.node-icon {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    animation: iconFloat 2s ease-in-out infinite;
+}
+
+.node-label {
+    font-size: 0.9rem;
+    font-weight: bold;
+    display: block;
+}
+
+/* Node Positions */
+.router { top: 50px; left: 50px; }
+.switch { top: 50px; right: 50px; }
+.firewall { bottom: 100px; left: 100px; }
+.cloud { bottom: 100px; right: 100px; }
+
+/* Connection Lines */
+.connection-line {
+    position: absolute;
+    background: linear-gradient(90deg, transparent, #00f2fe, transparent);
+    animation: dataFlow 2s ease-in-out infinite;
+}
+
+.line-1 {
+    top: 100px;
+    left: 150px;
+    width: 300px;
+    height: 3px;
+}
+
+.line-2 {
+    top: 150px;
+    left: 100px;
+    width: 3px;
+    height: 150px;
+    background: linear-gradient(0deg, transparent, #00f2fe, transparent);
+}
+
+.line-3 {
+    bottom: 150px;
+    left: 200px;
+    width: 200px;
+    height: 3px;
+}
+
+/* Animated Data Packets */
+.data-packet {
+    position: absolute;
+    font-size: 1rem;
+    animation: packetMove 3s ease-in-out infinite;
+    z-index: 10;
+}
+
+.packet-1 {
+    top: 95px;
+    left: 150px;
+    animation-delay: 0s;
+}
+
+.packet-2 {
+    top: 150px;
+    left: 95px;
+    animation-delay: 1s;
+}
+
+.packet-3 {
+    bottom: 145px;
+    left: 200px;
+    animation-delay: 2s;
+}
+
+/* Interest Grid */
+.interest-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin: 4rem 0;
+}
+
+.interest-card {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 2rem;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    text-align: center;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.interest-card::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.05), transparent);
+    transform: rotate(45deg);
+    animation: shimmer 3s ease-in-out infinite;
+}
+
+.interest-card:hover {
+    transform: translateY(-10px);
+    background: rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.4);
+}
+
+.interest-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    animation: iconPulse 2s ease-in-out infinite;
+}
+
+.learning-status {
+    display: inline-block;
+    background: rgba(0, 242, 254, 0.3);
+    color: #00f2fe;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    margin-top: 1rem;
+    border: 1px solid rgba(0, 242, 254, 0.5);
+    animation: statusGlow 2s ease-in-out infinite alternate;
+}
+
+/* Learning Showcase */
+.learning-showcase {
+    margin: 4rem 0;
+    text-align: center;
+}
+
+.learning-showcase h3 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.learning-intro {
+    font-size: 1.1rem;
+    opacity: 0.9;
+    margin-bottom: 2rem;
+}
+
+.resources-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.resource-card {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 1.5rem;
+    border-radius: 12px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: all 0.3s ease;
+}
+
+.resource-card:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.15);
+}
+
+.resource-type {
+    background: rgba(0, 242, 254, 0.2);
+    color: #00f2fe;
+    padding: 0.3rem 0.8rem;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    display: inline-block;
+    margin-bottom: 1rem;
+}
+
+.resource-link {
+    color: #00f2fe;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.resource-link:hover {
+    color: #ffffff;
+    text-shadow: 0 0 10px #00f2fe;
+}
+
+.future-goal {
+    background: rgba(255, 215, 0, 0.3);
+    color: #ffd700;
+    padding: 0.3rem 0.8rem;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    display: inline-block;
+    margin-top: 0.5rem;
+}
+
+/* Vision Section */
+.vision-section {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 3rem 2rem;
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    margin-top: 3rem;
+}
+
+.vision-section h3 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+.vision-points {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+.vision-point {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+.vision-point:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateX(10px);
+}
+
+.vision-emoji {
+    font-size: 2rem;
+    animation: emojiFloat 3s ease-in-out infinite;
+}
+
+.vision-point p {
+    margin: 0;
+    line-height: 1.5;
+}
+
+/* Animations */
+@keyframes gridMove {
+    0% { transform: translateX(0) translateY(0); }
+    100% { transform: translateX(10px) translateY(10px); }
+}
+
+@keyframes nodeGlow {
+    0% { box-shadow: 0 0 20px rgba(0, 242, 254, 0.3); }
+    100% { box-shadow: 0 0 30px rgba(0, 242, 254, 0.6), 0 0 40px rgba(0, 242, 254, 0.3); }
+}
+
+@keyframes iconFloat {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-5px); }
+}
+
+@keyframes dataFlow {
+    0% { background-position: 0% 50%; }
+    100% { background-position: 100% 50%; }
+}
+
+@keyframes packetMove {
+    0% { opacity: 0.5; transform: scale(0.8); }
+    50% { opacity: 1; transform: scale(1.2); }
+    100% { opacity: 0.5; transform: scale(0.8) translateX(100px); }
+}
+
+@keyframes shimmer {
+    0% { transform: translateX(-100%) translateY(-100%) rotate(45deg); }
+    100% { transform: translateX(100%) translateY(100%) rotate(45deg); }
+}
+
+@keyframes iconPulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+}
+
+@keyframes statusGlow {
+    0% { box-shadow: 0 0 5px rgba(0, 242, 254, 0.5); }
+    100% { box-shadow: 0 0 20px rgba(0, 242, 254, 0.8); }
+}
+
+@keyframes emojiFloat {
+    0%, 100% { transform: translateY(0px) rotate(0deg); }
+    33% { transform: translateY(-5px) rotate(5deg); }
+    66% { transform: translateY(5px) rotate(-5deg); }
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .network-container {
+        width: 350px;
+        height: 300px;
+        transform: scale(0.8);
+    }
+    
+    .interest-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .resources-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .vision-points {
+        grid-template-columns: 1fr;
+    }
+}
 
