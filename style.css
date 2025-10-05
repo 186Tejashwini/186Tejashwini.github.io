@@ -453,6 +453,14 @@ body {
 .achievement-item:hover {
     transform: translateY(-5px);
 }
+.project-description {
+  list-style-type: disc;
+  margin-left: 1.5rem;
+  padding-left: 0;
+  color: #333;
+  font-size: 1rem;
+}
+
 
 .achievement-item h3 {
     color: var(--primary-color);
@@ -1477,4 +1485,82 @@ body {
     margin: 0 auto;
   }
 }
+.reading-box {
+  background: rgba(255, 234, 179, 0.8);
+  padding: 2rem 1.5rem;
+  border-radius: 18px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  margin-top: 1rem;
+  color: #735c1f;
+}
 
+/* Slight padding adjustment for p inside reading-box */
+.reading-box p {
+  margin-bottom: 1.5rem;
+  font-size: 1.05rem;
+}
+
+.education-section {
+  background: linear-gradient(135deg, #dfe9f3 0%, #ffffff 100%);
+  padding: 4rem 1rem;
+  color: #333;
+}
+
+.education-section .section-title {
+  text-align: center;
+  font-size: 2.4rem;
+  margin-bottom: 2.5rem;
+  font-weight: 700;
+  color: #2a3a57;
+}
+
+.education-block {
+  max-width: 600px;
+  margin: 0 auto;
+  background: #f7f9fc;
+  padding: 2rem 2.5rem;
+  border-radius: 15px;
+  box-shadow: 0 8px 30px rgba(42, 58, 87, 0.1);
+  text-align: center;
+  color: #1f2f49;
+}
+
+.education-block h3 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.education-block p {
+  font-size: 1.1rem;
+  margin-bottom: 0.65rem;
+}
+.certifications-section {
+  background: #f9f9f9;
+  padding: 5rem 1rem;
+  color: #333;
+}
+
+.certifications-section .section-title {
+  text-align: center;
+  font-size: 2.4rem;
+  margin-bottom: 3rem;
+  font-weight: 700;
+  color: #444;
+}
+
+.certifications-list {
+  max-width: 700px;
+  margin: 0 auto;
+  padding-left: 1.2rem;
+  list-style-type: square;
+}
+
+.certifications-list li {
+  font-size: 1.1rem;
+  margin-bottom: 1.25rem;
+}
+.cert-date {
+  font-weight: 400;
+  color: #777;
+}
