@@ -1401,4 +1401,80 @@ body {
     gap: 1rem;
   }
 }
+/* Hobbies Section Grid */
+.hobbies-section {
+  padding: 4rem 1rem 6rem;
+  background: linear-gradient(135deg, #f7f3f1, #e8dcb5);
+}
+
+.hobbies-section .section-title {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  font-weight: 700;
+  color: #5b4636;
+}
+
+.hobbies-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Reading Books Section */
+.reading-section h3 {
+  font-size: 1.9rem;
+  margin-bottom: 1rem;
+  color: #8b6d43;
+}
+
+.reading-section p {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  color: #6f5841;
+}
+
+.books-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+}
+
+.book-card {
+  width: 140px;
+  text-align: center;
+}
+
+.book-cover {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.12);
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.book-cover:hover {
+  transform: scale(1.1);
+}
+
+.book-title {
+  margin-top: 0.6rem;
+  font-weight: 600;
+  color: #5a4733;
+  font-size: 1rem;
+}
+
+/* Responsive for small screens */
+@media (max-width:900px) {
+  .hobbies-grid {
+    grid-template-columns: 1fr;
+  }
+  .reading-section, .cooking-passion-section {
+    max-width: 90%;
+    margin: 0 auto;
+  }
+}
 
